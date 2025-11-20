@@ -1,5 +1,6 @@
 "use client"
 import React, { useCallback, useEffect, useRef, useState } from "react"
+import { Suspense } from "react"
 import { useSearchParams } from "next/navigation";
 import { Button } from '@heroui/button';
 const HOMEPAGE = () => {
@@ -9,7 +10,6 @@ const HOMEPAGE = () => {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
   const lastGeneratedRef = useRef({ topic: "", description: "" })
-  const debounceRef = useRef(null)
   const topicInputRef = useRef(null)
 
   const [apiKey, setApiKey] = useState("")
@@ -215,4 +215,10 @@ const HOMEPAGE = () => {
   )
 }
 
-export default HOMEPAGE
+export default function Page() {
+  return (
+    <Suspense fallback={<div className="p-4 text-white">Loading...</div>}>
+      <HOMEPAGE />
+    </Suspense>
+  )
+}
