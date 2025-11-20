@@ -25,8 +25,21 @@ const HOMEPAGE = () => {
       // ignore
     }
   };
+  //auto populate api key and custom instruction and platform from local storage
+  useEffect(() => {
+    try {
+      const storedKey = localStorage.getItem("contentAI_apiKey") || "";
+      const storedInstruction = localStorage.getItem("contentAI_customInstruction") || "";
+      const storedPlatform = localStorage.getItem("contentAI_platform") || "";
+      setApiKey(storedKey);
+      setCustomInstruction(storedInstruction);
+      setPlatform(storedPlatform);
+    } catch {
+      // ignore
+    }
+  }, []);
 
- 
+
 
   const resetSettings = () => {
     setApiKey("");
