@@ -1,36 +1,150 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# **ContentMint**
 
-First, run the development server:
+AI-powered content assistant built for creators.
+Generate topics, write scripts, apply global instructions, and optimize content for YouTube, TikTok, Instagram, and more.
+
+---
+
+## 🚀 **Features**
+
+### **🔹 Script Generation**
+
+Turn any idea into a ready-to-use script using Gemini AI.
+
+### **🔹 Topic Discovery**
+
+Find fresh, relevant topics to create content around.
+
+### **🔹 Custom Master Instructions**
+
+Define global writing style rules (tone, format, persona) to influence all AI outputs.
+
+### **🔹 Script Optimization**
+
+Improve existing scripts for your specific platform (YouTube, TikTok, Reels, Shorts, etc).
+
+### **🔹 Clean, Responsive UI**
+
+Built with Tailwind, HeroUI, and Framer Motion for smooth animations.
+
+---
+
+## 🛠️ **Tech Stack**
+
+| Layer                 | Tools                             |
+| --------------------- | --------------------------------- |
+| **Frontend**          | Next.js 14 (App Router), React 18 |
+| **Styling**           | TailwindCSS, HeroUI               |
+| **Animations**        | Framer Motion                     |
+| **API / Backend**     | Next.js API Routes                |
+| **AI Engine**         | Google Gemini 2.5 Flash           |
+| **State & Utilities** | React Hooks, LocalStorage         |
+
+---
+
+## 🔧 **Environment Setup**
+
+### **1. Clone the repo**
+
+```bash
+git clone https://github.com/YOUR_USERNAME/ContentMint.git
+cd ContentMint
+```
+
+### **2. Install dependencies**
+
+```bash
+npm install
+# or
+yarn install
+```
+
+
+---
+
+## ▶️ **Running the App**
+
+### **Development**
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open in browser: **[http://localhost:3000](http://localhost:3000)**
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### **Production**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🤖 **API Routes**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### **1. /api/find-topics**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Input:**
 
-## Deploy on Vercel
+```json
+{
+  "description": "fintech trends",
+  "instruction": "keep concise",
+  "apiKey": "xxxx"
+}
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Output:**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```json
+[
+  { "topic": "UPI Growth Analysis", "description": "..." },
+  ...
+]
+```
+
+---
+
+### **2. /api/generate-script**
+
+Generates content scripts based on topic, description, and custom master instructions.
+
+---
+
+### **3. /api/optimize-script**
+
+Enhances or transforms existing scripts based on the user’s optimization request.
+
+---
+
+## ✨ **UI & Animation**
+
+* Smooth transitions powered by **Framer Motion**
+* Clean, accessible layout using **TailwindCSS**
+* Modern components via **HeroUI**
+
+---
+
+## 🧩 **Key Highlights**
+
+* Fully client-driven interface
+* LocalStorage for user preferences
+* Modular architecture
+* Clear separation between UI and API logic
+* Easy to extend with new content tools
+
+---
+
+## 📄 **License**
+
+MIT License — free to use and modify.
+
+---
+
+## 💡 **Contributions**
+
+Pull requests are welcome. Feel free to open issues for bugs or suggestions.
+
+---
