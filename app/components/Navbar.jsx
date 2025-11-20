@@ -13,7 +13,7 @@ import {
   Button,
 } from "@heroui/react";
 
-export const ReelcraftLogo = () => {
+export const ContentmintLogo = () => {
   return (
     <svg fill="none" height="36" viewBox="0 0 32 32" width="36">
       <path
@@ -48,8 +48,7 @@ export default function App() {
           className="sm:hidden text-slate-100"
         />
         <NavbarBrand className="flex items-center gap-3 text-slate-100">
-          {/* <Link className="font-bold text-inherit" href="/"><ReelcraftLogo /></Link> */}
-          <Link className="font-bold text-inherit" href="/">REELCRAFT</Link>
+          <Link className="font-bold text-inherit" href="/">CONTENT-MINT</Link>
         </NavbarBrand>
       </NavbarContent>
 
